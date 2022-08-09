@@ -1,0 +1,12 @@
+from PyPDF2 import PdfFileMerger
+
+
+pdfs = ['my_documen1t.pdf', 'mydocument2.pdf']
+
+merger = PdfFileMerger()
+
+for pdf in pdfs:
+    merger.append(pdf,)#pages=(0,5,2)
+
+merger.write("output_document.pdf")
+merger.close()
